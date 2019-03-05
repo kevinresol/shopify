@@ -20,12 +20,15 @@ interface Products {
 			tags:String,
 		}
 	}):{product:Product};
+	
+	@:delete('/$id')
+	function delete(id:Float):{};
 }
 
 typedef Product = {
 	body_html:String,
 	created_at:String,
 	handle:String,
-	id:Int,
+	id:Float,
 	// ... TODO: more fields
 }
